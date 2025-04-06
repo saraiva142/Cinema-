@@ -90,6 +90,89 @@
         </div>
     </div>
 
+    <hr>
+
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>
+          <h1>Cadastrar Filmes</h1>
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Cadastre um filme para que ele apareça na lista de filmes disponíveis.
+      </figcaption>
+    </figure>
+    
+    <div class="cadastro_film" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
+      <form class="row g-3" style="width: 46rem;">
+        <div class="col-md-6">
+          <label for="inputTitulo" class="form-label">Título</label>
+          <input type="text" class="form-control" id="inputTitulo">
+        </div>
+        <div class="col-md-6">
+          <label for="inputGenero" class="form-label">Gênero</label>
+          <select id="inputGenero" class="form-select">
+            <option selected>Gênero...</option>
+            <option>Comédia</option>
+            <option>Românce</option>
+            <option>Ficção</option>
+            <option>Ação</option>
+            <option>Animação</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="inputDescricao" class="form-label">Descrição</label>
+          <input type="text" class="form-control" id="inputDescricao" placeholder="Sinópse do filme">
+        </div>
+        <div class="col-12">
+          <label for="inputClassificaoIndicativa" class="form-label">Classificação Indicativa</label>
+          <select id="inputClassificaoIndicativa" class="form-select" placeholder="Classificação Indicativa">
+            <option style="color: green;">L</option>
+            <option style="color: blue;">10</option>
+            <option style="color: yellow;">12</option>
+            <option style="color: orange;">14</option>
+            <option style="color: red;">16</option>
+            <option style="color: black;">18</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputDuracao" class="form-label">Duração (min)</label>
+          <input type="number" class="form-control" id="inputDuracao">
+        </div>
+        <div class="col-md-6">
+          <label for="inputDataEstreia" class="form-label">Data de Estreia</label>
+          <input type="date" id="inputDataEstreia" class="form-select"></input>
+        </div>
+        <div class="col-12">
+          
+          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Salvar
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Filme Cadastrado ✨</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    O filme foi cadastrado com sucesso! Agora ele já está disponível para compra de ingressos.
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-dark">Confirmar</button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <hr>
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
