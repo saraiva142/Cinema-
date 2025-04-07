@@ -37,6 +37,89 @@
       </nav>
 
 
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="src/cartazes/killbill.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="src/cartazes/budapest.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="src/cartazes/starwars.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>
+          <h1>Cadastrar Salas 🛋</h1>
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Cadastre uma nova sala para o nosso cinema! 
+      </figcaption>
+    </figure>
+    
+    <div class="cadastro_film" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
+      <form class="row g-3" style="width: 46rem;">
+        <div class="col-md-6">
+          <label for="inputNomeSala" class="form-label">Nome da Sala</label>
+          <input type="text" class="form-control" id="inputNomeSala">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCapacidadeSala" class="form-label">Capacidade da Sala</label>
+          <input type="input" class="form-control" id="inputCapacidadeSala" placeholder="62 lugares">
+        </div>
+        <div class="col-md-12">
+          <label for="inputTipo" class="form-label">Tipo</label>
+          <select id="inputTipo" class="form-select">
+            <option selected>Tipo...</option>
+            <option>2D</option>
+            <option>3D</option>
+            <option>IMAX</option>
+          </select>
+        </div>
+        <div class="col-12">
+          
+          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Salvar
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sala Cadastrada ✨</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    A sala foi cadastrada com sucesso! 🎉
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-dark">Confirmar</button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

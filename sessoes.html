@@ -36,7 +36,112 @@
         </div>
       </nav>
 
+      
+      
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="src/cartazes/clublut.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="src/cartazes/openheim.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="src/cartazes/fantrapo.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>
+            <h1>Cadastro de Sessões 🍿</h1>
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Cadastre aqui as sessões dos filmes que estarão em cartaz no CineSaraiva. 
+        </figcaption>
+      </figure>
+      
+
+      <div class="cadastro_film" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
+        <form class="row g-3" style="width: 46rem;">
+          <div class="col-md-6">
+            <label for="inputFilme" class="form-label">Filme</label>
+            <select id="inputFilme" class="form-select">
+              <option selected>O Fanástico SR. Raposo</option>
+              <option>Clube da Luta</option>
+              <option>A Vida Secreta de Walter Mitty</option>
+              <option>Meu Malvado Favorito</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputSala" class="form-label">Sala</label>
+            <select id="inputSala" class="form-select">
+              <option selected>Sala-Pipoca</option>
+              <option>Sala-Spielberg</option>
+              <option>Sala-Tarantino</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputDataHora" class="form-label">Data & Hora</label>
+            <input type="datetime-local" class="form-control" id="inputDataHora" placeholder="62 lugares">
+          </div>
+          <div class="col-md-6">
+            <label for="inputValor" class="form-label">Preço</label>
+            <input type="number" class="form-control" id="inputValor" placeholder="R$60,00">
+          </div>
+          <div class="col-md-6">
+            <label for="inputIdioma" class="form-label">Idioma</label>
+            <select id="inputIdioma" class="form-select">
+              <option selected>Dublado</option>
+              <option>Legendado</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="inputFormato" class="form-label">Formato</label>
+            <select id="inputFormato" class="form-select">
+              <option selected>2D</option>
+              <option>3D</option>
+            </select>
+          </div>
+          <div class="col-12">
+            
+            <!-- Button trigger modal -->
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Salvar
+              </button>
+  
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Sessão Cadastrada ✨</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      A sessão foi cadastrada com sucesso! 🎉
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-dark">Confirmar</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+          </div>
+        </form>
+      </div>
+      
+      <script src="./js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
