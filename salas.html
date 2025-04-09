@@ -71,7 +71,7 @@
       </figcaption>
     </figure>
     
-    <div class="cadastro_film" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
+    <div class="cadastro_sala" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
       <form class="row g-3" style="width: 46rem;">
         <div class="col-md-6">
           <label for="inputNomeSala" class="form-label">Nome da Sala</label>
@@ -93,7 +93,7 @@
         <div class="col-12">
           
           <!-- Button trigger modal -->
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-dark" id="btn-salvar-sala" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Salvar
             </button>
 
@@ -119,7 +119,77 @@
       </form>
     </div>
 
+    <hr>
+
+    <!-- Button trigger modal -->
+    <button  type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModalListSalas">
+      Listar Salas
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalListSalas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tabela de Salas</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- tabela -->
+            <div class="row"> 
+              <div class="col-12 table-responsive">
+        
+                <table class="table table-sm table-striped table-bordered text-center align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Capacidade</th>
+                      <th scope="col">Tipo</th>
+                      <th scope="col">Editar/Excluir</th>
+                    </tr>
+                  </thead>
+                  <tbody id="salas-tbody">
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>
+                        <td>
+                          <button class="btn btn-warning btn-sm btn-editar" data-id="${sala.id}">
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                          &nbsp;
+                          <button class="btn btn-danger btn-sm btn-excluir" data-id="${sala.id}">
+                            <i class="bi bi-trash-fill"></i>
+                          </button>
+                        </td>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- fim table -->
+              </div>
+            </div>
+            <!-- fim row -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-transparent" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" id="btn-tabela">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </figure>
+  
+
+  <hr>
+
 
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./controller/salasController.js"></script>
 </body>
 </html>
