@@ -186,18 +186,60 @@
   
       <!-- Modal -->
       <div class="modal fade" id="exampleModalListFilm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">Tabela de Filmes</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <!-- tabela -->
+              <div class="row"> 
+                <div class="col-12 table-responsive">
+          
+                  <table class="table table-sm table-striped table-bordered text-center align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Genero</th>
+                        <th scope="col">Classificação</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Duração</th>
+                        <th scope="col">Estreia</th>
+                        <th scope="col">Editar/Excluir</th>
+                      </tr>
+                    </thead>
+                    <tbody id="filmes-tbody">
+                      <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                          <td>
+                            <button class="btn btn-warning btn-sm btn-editar" data-id="${filme.id}">
+                              <i class="bi bi-pencil-square"></i>
+                            </button>
+                            &nbsp;
+                            <button class="btn btn-danger btn-sm btn-excluir" data-id="${filme.id}">
+                              <i class="bi bi-trash-fill"></i>
+                            </button>
+                          </td>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- fim table -->
+                </div>
+              </div>
+              <!-- fim row -->
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-transparent" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-dark">Save changes</button>
+              <button type="button" class="btn btn-dark" id="btn-tabela">Save changes</button>
             </div>
           </div>
         </div>

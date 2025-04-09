@@ -53,6 +53,6 @@ export class Filme {
     this.data = data;
   }
   toString() {
-    return `Filme: ${this.titulo}, Genero: ${this.genero}, Descricao: ${this.descricao}, Classificacao Indicativa: ${this.classificacaoIndicativa}, Duracao: ${this.duracao}, Data: ${this.data}`;
+    return `Filme: ${this.titulo}, Genero: ${this.genero}, Descricao: ${this.descricao}, Classificacao Indicativa: ${this.classificacaoIndicativa}, Duracao: ${this.duracao}, Data: ${this.data}, ID: ${this.id}`;
   }
 }

@@ -8,14 +8,15 @@ class FilmesController {
   }
 
   init() {
-    
     const btnSalvarFilme = document.getElementById("btn-salvar");
-    
+
+    // Usando arrow function para preservar o contexto de `this`
     btnSalvarFilme.addEventListener("click", (event) => {
-      event.preventDefault(); // Evita comportamento padrão, pois lá o botão abre um modal
+      event.preventDefault(); // Evita comportamento padrão
       this.adicionarFilme();
     });
 
+    this.carregarFilmesDoLocalStorage();
   }
 
   adicionarFilme() {
@@ -52,6 +53,8 @@ class FilmesController {
 
   salvarNoLocalStorage() {
     console.log("Salvando no localStorage:", this.listaFilmes); // Verifica os dados
+    console.log("Salvando no localStorage:", this.listaFilmes); // Verifica os dados
+  
     localStorage.setItem("filmes", JSON.stringify(this.listaFilmes));
   }
 
@@ -62,6 +65,48 @@ class FilmesController {
         this.atualizarTabela();
     }
   }
+
+  atualizarTabela() {
+    const tbody = document.querySelector("#filmes-tbody");
+    if (!tbody) {
+      console.error("O tbody não foi encontrado!");
+      return;
+    }
+    tbody.innerHTML = "";
+    console.log("Atualizando tabela com:", this.listaFilmes); // Verifica os dados
+
+    this.listaFilmes.forEach(filme => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${filme.id}</td>
+            <td><strong>${filme.titulo}</strong></td>
+            <td>${filme.genero}</td>
+            <td>${filme.descricao}</td>
+            <td>${filme.classificacaoIndicativa}</td>
+            <td>${filme.duracao}</td> <!-- Exibe a duração -->
+            <td>${this.formatarData(filme.data)}</td>
+            <td>
+                <button class="btn btn-warning btn-sm btn-editar" data-id="${filme.id}">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+                &nbsp;
+                <button class="btn btn-danger btn-sm btn-excluir" data-id="${filme.id}">
+                    <i class="bi bi-trash-fill"></i>
+                </button>
+            </td>
+        `;
+        tbody.appendChild(tr);
+
+        // Adiciona evento para o botão de editar
+        tr.querySelector(".btn-editar").addEventListener("click", () => this.abrirModalEdicao(filme));
+        tr.querySelector(".btn-excluir").addEventListener("click", () => this.abrirModalExcluir(filme.id));
+    });
+  }
+
+  formatarData(data) {
+    const d = new Date(data);
+    return d.toLocaleDateString("pt-BR");
+}
 
 }
 
