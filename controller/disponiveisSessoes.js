@@ -22,7 +22,7 @@ class SessoesDisponiveisController {
         listaSessoes.forEach(sessao => {
             const card = document.createElement("div");
             card.className = "card text-bg-transparent mb-3";
-            card.style = "max-width: 350px; background-color: rgba(0, 0, 0, 0.1); border: none;";
+            card.style = "max-width: 350px; background-color: rgba(0, 0, 0, 0.08); border: none;";
 
             card.innerHTML = `
                 <div class="row g-0">
