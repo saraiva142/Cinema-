@@ -36,7 +36,141 @@
         </div>
       </nav>
 
+      <div class="container">
+        <br>
+          <h3>Compre Ingrssos 🎟</h5>
+          <br>
+          <br>
+          <div class="row">
+              
+              <div class="col-12 col-sm-6 col-lg-4" style="padding-bottom: 20px;"> 
+                  <div class="card">
+                      <img src="./src/cartazes/parasite.jpg" alt="" class="card-img-top">
+                      <!-- <div class="card-body">
+                          <h4 class="card-title">O Fantástico Sr. Raposo</h4>
+                          <p class="card-text">
+                              O Sr. Raposo prometeu à esposa que deixaria a vida de roubos de galinhas. Porém, a proximidade do novo lar com as fazendas de Boggis, Bunce e Bean faz com que volte à velha vida. Só que logo o trio de fazendeiros se une para capturá-lo.
+                          </p>
+                          <br>
+                          <a href="" class="btn btn-dark">Comprar ingresso</a>
+                      </div> -->
+                  </div>
+              <!-- fim col     -->
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4" style="padding-bottom: 20px;">
+                  <div class="card">
+                      <img src="./src/cartazes/flow.jpg" alt="" class="card-img-top">
+                      <!-- <div class="card-body">
+                          <h4 class="card-title">A Space Odyssey</h4>
+                          <p class="card-text">
+                              Dave Bowman e outros astronautas são enviados para uma misteriosa missão, os chips de seus computadores começam a mostrar um comportamento estranho, levando a um tenso confronto entre homem e máquina que resulta em uma viagem alucinante no espaço e no tempo.
+                          </p>
+                          <a href="" class="btn btn-dark">Comprar ingresso</a>
+                      </div> -->
+                  </div>
+              <!-- fim col     -->
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4" style="padding-bottom: 20px;">
+                  <div class="card">
+                      <img src="./src/cartazes/aindaaqui.jpg" alt="" class="card-img-top">
+                      <!-- <div class="card-body">
+                          <h4 class="card-title">A Vida Secreta de Walter Mitty</h4>
+                          <p class="card-text">
+                              Um homem tímido ao receber um pacote com negativos do importante fotógrafo Sean O'Connell, ele percebe que está faltando uma foto. É quando, Walter, com o apoio de Cheryl (Kristen Wiig) é obrigado a embarcar em uma verdadeira aventura.
+                          </p>
+                          <a href="" class="btn btn-dark">Comprar ingresso</a>
+                      </div> -->
+                  </div>
+              <!-- fim col     -->
+              </div>
+
+          <!-- fim row -->
+          </div>
+      </div>
+
+    <hr>
+
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>
+          <h1>Compra de Ingresso 🍿</h1>
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Compre seu ingresso para a sessão desejada!
+      </figcaption>
+    </figure>
+    
+
+    <div class="cadastro_ingresso" style="display: flex; justify-content: center; align-items: center; padding: 5%;">
+      <form class="row g-3" style="width: 46rem;">
+        <div class="col-md-6">
+          <label for="inputSessao" class="form-label">Filme - Sala - Data/Hora</label>
+          <select id="inputSessao" class="form-select">
+            <option selected>O Fanástico SR. Raposo</option>
+            <option>Clube da Luta</option>
+            <option>A Vida Secreta de Walter Mitty</option>
+            <option>Meu Malvado Favorito</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputCliente" class="form-label">Nome do Cliente</label>
+          <input id="inputCliente" type="text" class="form-control" placeholder="Digite seu nome">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCPF" class="form-label">CPF do Cliente</label>
+          <input id="inputCPF" type="number" class="form-control" placeholder="Digite seu CPF">
+        </div>
+        <div class="col-md-6">
+          <label for="inputAssento" class="form-label">Assento</label>
+          <input type="text" class="form-control" id="inputAssento" placeholder="A10">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPagamento" class="form-label">Forma de Pagamento</label>
+          <select id="inputPagamento" class="form-select">
+            <option selected>Crédito</option>
+            <option>Débito</option>
+            <option>Pix</option>
+            <option>Dinheiro</option>
+          </select>
+        </div>
+        
+        <div class="col-12">
+          
+          <!-- Button trigger modal -->
+            <button type="button" id="btn-salvar-ingresso" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Comprar Ingresso
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresso Comprado ✨</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    O ingresso foi comprado com sucesso! 🎉
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-dark">Confirmar</button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    
+    <hr>
+
 
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./controller/ingressosController.js"></script>
 </body>
 </html>
