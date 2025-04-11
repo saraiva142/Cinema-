@@ -57,7 +57,7 @@ class IngressoController {
 
         // Salva no localStorage e atualiza a tabela
         this.salvarNoLocalStorage();
-        this.atualizarTabela();
+        // this.atualizarTabela();
     }
 
     criarIngressoDoFormulario() {
@@ -80,27 +80,27 @@ class IngressoController {
         const ingressosSalvos = localStorage.getItem("ingressos");
         if (ingressosSalvos) {
             this.listaIngressos = JSON.parse(ingressosSalvos);
-            this.atualizarTabela();
+            // this.atualizarTabela();
         }
     }
 
-    atualizarTabela() {
-        const tabelaIngressos = document.getElementById("ingressos-tbody");
-        tabelaIngressos.innerHTML = ""; // Limpa a tabela antes de atualizar
+    // atualizarTabela() {
+    //     const tabelaIngressos = document.getElementById("ingressos-tbody");
+    //     tabelaIngressos.innerHTML = ""; // Limpa a tabela antes de atualizar
 
-        this.listaIngressos.forEach((ingresso) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
-                <td>${ingresso.getId()}</td>
-                <td>${ingresso.getSessaoId()}</td>
-                <td>${ingresso.getNomeCliente()}</td>
-                <td>${ingresso.getCpfCliente()}</td>
-                <td>${ingresso.getAssento()}</td>
-                <td>${ingresso.getPagamento()}</td>
-            `;
-            tabelaIngressos.appendChild(tr);
-        });
-    }
+    //     this.listaIngressos.forEach((ingresso) => {
+    //         const tr = document.createElement("tr");
+    //         tr.innerHTML = `
+    //             <td>${ingresso.getId()}</td>
+    //             <td>${ingresso.getSessaoId()}</td>
+    //             <td>${ingresso.getNomeCliente()}</td>
+    //             <td>${ingresso.getCpfCliente()}</td>
+    //             <td>${ingresso.getAssento()}</td>
+    //             <td>${ingresso.getPagamento()}</td>
+    //         `;
+    //         tabelaIngressos.appendChild(tr);
+    //     });
+    // }
 
     
 }
